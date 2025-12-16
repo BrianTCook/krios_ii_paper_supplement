@@ -1,0 +1,23 @@
+name: krios_env
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python>=3.11
+  - ipywidgets
+  - jupyter
+  - jupyterlab
+  - nb_conda_kernels
+  - numpy>=1.22
+  - numba
+  - matplotlib
+  - pandas>=1.3
+  - scipy>=1.12
+  - h5py
+  - astropy
+  - gsl
+  - python-wget
+  - pot
+  - gala=1.9.1
+  - galpy

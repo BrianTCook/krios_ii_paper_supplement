@@ -1,0 +1,1493 @@
+g++ -std=c++17 -Wall -Wextra -pedantic -O3 -fopenmp -I/usr/local/include -o krios_executable main/main.o integrator/integrator.o particle/particle.o system/system.o units/units.o reference_frame/reference_frame.o nearest_neighbors/box/box.o nearest_neighbors/hilbert/hilbert.o nearest_neighbors/octree/octree.o relaxation/relaxation.o relaxation/kdtree.o potential/potential.o potential/cluster_potential/cluster_potential.o potential/host_potential/static_analytic_potential/host_potential.o potential/cluster_potential/zhao_library/Ylm_jump_table.o potential/cluster_potential/zhao_library/D_Ylm_jump_table.o potential/cluster_potential/zhao_library/D2_Ylm_jump_table.o potential/cluster_potential/zhao_library/Cnw_jump_table.o potential/cluster_potential/zhao_library/D_Cnw_jump_table.o potential/cluster_potential/zhao_library/D2_Cnw_jump_table.o -L/usr/local/lib -lgsl -lgslcblas -lm -fopenmp
+===========================================================
+KRIOS run, Longleaf Job ID: 20613092
+
+nmax: 10, lmax: 5
+sort_and_filter_scf_modes: 1
+
+ics_filename: /path/to/KRIOS/data/krios_king_ics_n_50000.csv
+
+include_relaxation: 1
+pairing_to_use: 2
+target_nb_neigh: 30
+couloumb_gamma: 0.6
+betase_max: 1.5707
+
+io_in_physical_units: 1
+m_sys_cluster_msun: 100000 MSun
+r_half_mass_pc: 10 pc
+
+t_end: 5000
+dt_max: none
+n_samples_per_t_dyn: 1
+use Stodolkiewicz: 0
+parsing_to_use: 3
+rb_frac: 0.999
+scf_center_method_to_use: 2
+
+host potential: MWPotential2014 (galpy)
+
+x_gc_init: 4.04232 kpc
+y_gc_init: 0 kpc
+z_gc_init: 19.5867 kpc
+vx_gc_init: 0 km/s
+vy_gc_init: 81.4921 km/s
+vz_gc_init: 0 km/s
+
+integration_dt_eta: 0.0025
+
+get_snapshots: 1, verbose_output: 1
+n_integrations_per_saved_snapshot: 10000
+n_integrations_per_complete_scf_refresh: 5
+===========================================================
+
+NOTE: these outputs are in Henon units; consult the snapshots for information in physical units
+# of threads: 128
+# of procs: 128
+
+1 mass HU = 100000 MSun
+1 length HU = 12.3084 pc
+1 time HU = 2.03597 Myr
+
+=====================================================
+system_time: 0 Myr, wall clock time 2025-10-28 14:37:38 UTC
+system_dt: 132.515 Myr
+integration_dt: 3.77385 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999887
+
+Rc: 3.86652 pc
+r_0.01: 1.54898 pc, r_0.1: 3.86169 pc, r_0.2: 5.37724 pc, r_0.5: 10.003 pc, r_0.9: 23.271 pc
+
+SCF tracer particle E_wrt_host: -0.866074 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.329417 [1e3 kpc (km/s)]
+cluster virial ratio: 1.00007
+
+alpha: 0.514164, b: 0.621886
+
+# of particles in core: 5018
+# of particles outside tidal radius = 108.296 pc: 0
+# of particles included in setting up the SCF: 50000
+# of particles, E_wrt_cluster < 0: 50000
+=====================================================
+system_time: 132.515 Myr, wall clock time 2025-10-28 14:47:09 UTC
+system_dt: 117.134 Myr
+integration_dt: 1.58639 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.99993
+
+Rc: 3.78565 pc
+r_0.01: 1.53293 pc, r_0.1: 3.80178 pc, r_0.2: 5.34523 pc, r_0.5: 10.0039 pc, r_0.9: 23.2398 pc
+
+SCF tracer particle E_wrt_host: -0.866022 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.329418 [1e3 kpc (km/s)]
+cluster virial ratio: 0.999927
+
+alpha: 0.521125, b: 0.618399
+
+# of particles in core: 4957
+# of particles outside tidal radius = 53.5686 pc: 35
+# of particles included in setting up the SCF: 49992
+# of particles, E_wrt_cluster < 0: 49991
+=====================================================
+system_time: 249.65 Myr, wall clock time 2025-10-28 14:57:03 UTC
+system_dt: 143.698 Myr
+integration_dt: 5.42954 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999973
+
+Rc: 3.71662 pc
+r_0.01: 1.54716 pc, r_0.1: 3.78682 pc, r_0.2: 5.31985 pc, r_0.5: 9.99742 pc, r_0.9: 23.7303 pc
+
+SCF tracer particle E_wrt_host: -0.866026 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.329539 [1e3 kpc (km/s)]
+cluster virial ratio: 0.998924
+
+alpha: 0.52672, b: 0.613999
+
+# of particles in core: 4794
+# of particles outside tidal radius = 122.145 pc: 39
+# of particles included in setting up the SCF: 49975
+# of particles, E_wrt_cluster < 0: 49970
+=====================================================
+system_time: 393.348 Myr, wall clock time 2025-10-28 15:06:16 UTC
+system_dt: 126.81 Myr
+integration_dt: 3.35784 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999968
+
+Rc: 3.7134 pc
+r_0.01: 1.53691 pc, r_0.1: 3.75595 pc, r_0.2: 5.29456 pc, r_0.5: 9.98045 pc, r_0.9: 23.7979 pc
+
+SCF tracer particle E_wrt_host: -0.866004 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.329184 [1e3 kpc (km/s)]
+cluster virial ratio: 1.00736
+
+alpha: 0.528719, b: 0.612657
+
+# of particles in core: 4860
+# of particles outside tidal radius = 88.511 pc: 61
+# of particles included in setting up the SCF: 49955
+# of particles, E_wrt_cluster < 0: 49955
+=====================================================
+system_time: 520.158 Myr, wall clock time 2025-10-28 15:17:45 UTC
+system_dt: 119.349 Myr
+integration_dt: 4.89294 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999963
+
+Rc: 3.66258 pc
+r_0.01: 1.52358 pc, r_0.1: 3.76705 pc, r_0.2: 5.26812 pc, r_0.5: 9.97347 pc, r_0.9: 24.2645 pc
+
+SCF tracer particle E_wrt_host: -0.865958 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.329207 [1e3 kpc (km/s)]
+cluster virial ratio: 1.01067
+
+alpha: 0.532152, b: 0.608264
+
+# of particles in core: 4698
+# of particles outside tidal radius = 113.929 pc: 175
+# of particles included in setting up the SCF: 49857
+# of particles, E_wrt_cluster < 0: 49841
+=====================================================
+system_time: 639.507 Myr, wall clock time 2025-10-28 15:25:02 UTC
+system_dt: 138.65 Myr
+integration_dt: 5.52102 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999901
+
+Rc: 3.71453 pc
+r_0.01: 1.54438 pc, r_0.1: 3.76871 pc, r_0.2: 5.22973 pc, r_0.5: 9.87112 pc, r_0.9: 24.2597 pc
+
+SCF tracer particle E_wrt_host: -0.865994 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.329132 [1e3 kpc (km/s)]
+cluster virial ratio: 1.03255
+
+alpha: 0.527033, b: 0.605755
+
+# of particles in core: 4833
+# of particles outside tidal radius = 125.713 pc: 202
+# of particles included in setting up the SCF: 49827
+# of particles, E_wrt_cluster < 0: 49820
+=====================================================
+system_time: 778.157 Myr, wall clock time 2025-10-28 15:37:34 UTC
+system_dt: 116.719 Myr
+integration_dt: 2.44276 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999931
+
+Rc: 3.577 pc
+r_0.01: 1.48694 pc, r_0.1: 3.69598 pc, r_0.2: 5.2283 pc, r_0.5: 9.89409 pc, r_0.9: 24.8043 pc
+
+SCF tracer particle E_wrt_host: -0.865984 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.329168 [1e3 kpc (km/s)]
+cluster virial ratio: 1.17867
+
+alpha: 0.533613, b: 0.599674
+
+# of particles in core: 4641
+# of particles outside tidal radius = 79.4907 pc: 504
+# of particles included in setting up the SCF: 49696
+# of particles, E_wrt_cluster < 0: 49603
+=====================================================
+system_time: 894.876 Myr, wall clock time 2025-10-28 15:45:06 UTC
+system_dt: 109.393 Myr
+integration_dt: 5.76035 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999879
+
+Rc: 3.61042 pc
+r_0.01: 1.50138 pc, r_0.1: 3.69801 pc, r_0.2: 5.19106 pc, r_0.5: 9.91609 pc, r_0.9: 25.0366 pc
+
+SCF tracer particle E_wrt_host: -0.866047 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.328997 [1e3 kpc (km/s)]
+cluster virial ratio: 1.11657
+
+alpha: 0.534642, b: 0.598109
+
+# of particles in core: 4762
+# of particles outside tidal radius = 127.304 pc: 486
+# of particles included in setting up the SCF: 49568
+# of particles, E_wrt_cluster < 0: 49548
+=====================================================
+system_time: 1004.27 Myr, wall clock time 2025-10-28 15:53:02 UTC
+system_dt: 131.599 Myr
+integration_dt: 2.02107 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999952
+
+Rc: 3.5408 pc
+r_0.01: 1.51623 pc, r_0.1: 3.64249 pc, r_0.2: 5.14586 pc, r_0.5: 9.84421 pc, r_0.9: 25.0933 pc
+
+SCF tracer particle E_wrt_host: -0.866046 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.329145 [1e3 kpc (km/s)]
+cluster virial ratio: 3.00635
+
+alpha: 0.537817, b: 0.593796
+
+# of particles in core: 4675
+# of particles outside tidal radius = 62.6833 pc: 650
+# of particles included in setting up the SCF: 49497
+# of particles, E_wrt_cluster < 0: 49488
+=====================================================
+system_time: 1135.87 Myr, wall clock time 2025-10-28 16:03:52 UTC
+system_dt: 115.816 Myr
+integration_dt: 5.45435 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999965
+
+Rc: 3.47144 pc
+r_0.01: 1.43964 pc, r_0.1: 3.61428 pc, r_0.2: 5.10044 pc, r_0.5: 9.81235 pc, r_0.9: 25.6244 pc
+
+SCF tracer particle E_wrt_host: -0.866141 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.329034 [1e3 kpc (km/s)]
+cluster virial ratio: 1.41168
+
+alpha: 0.543161, b: 0.586056
+
+# of particles in core: 4539
+# of particles outside tidal radius = 121.885 pc: 785
+# of particles included in setting up the SCF: 49273
+# of particles, E_wrt_cluster < 0: 49242
+=====================================================
+system_time: 1251.68 Myr, wall clock time 2025-10-28 16:11:02 UTC
+system_dt: 115.009 Myr
+integration_dt: 4.44461 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999942
+
+Rc: 3.4435 pc
+r_0.01: 1.46613 pc, r_0.1: 3.61019 pc, r_0.2: 5.09507 pc, r_0.5: 9.87926 pc, r_0.9: 25.7259 pc
+
+SCF tracer particle E_wrt_host: -0.866188 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.329685 [1e3 kpc (km/s)]
+cluster virial ratio: 2.04232
+
+alpha: 0.545028, b: 0.585574
+
+# of particles in core: 4502
+# of particles outside tidal radius = 106.449 pc: 824
+# of particles included in setting up the SCF: 49205
+# of particles, E_wrt_cluster < 0: 49205
+=====================================================
+system_time: 1366.69 Myr, wall clock time 2025-10-28 16:22:10 UTC
+system_dt: 99.8669 Myr
+integration_dt: 3.78253 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.99993
+
+Rc: 3.38041 pc
+r_0.01: 1.45241 pc, r_0.1: 3.56128 pc, r_0.2: 5.08046 pc, r_0.5: 9.87917 pc, r_0.9: 26.0707 pc
+
+SCF tracer particle E_wrt_host: -0.866136 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.329664 [1e3 kpc (km/s)]
+cluster virial ratio: 3.31615
+
+alpha: 0.549996, b: 0.581397
+
+# of particles in core: 4487
+# of particles outside tidal radius = 95.4197 pc: 1082
+# of particles included in setting up the SCF: 49095
+# of particles, E_wrt_cluster < 0: 48967
+=====================================================
+system_time: 1466.56 Myr, wall clock time 2025-10-28 16:28:34 UTC
+system_dt: 125.007 Myr
+integration_dt: 5.67509 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.99991
+
+Rc: 3.33071 pc
+r_0.01: 1.45419 pc, r_0.1: 3.55195 pc, r_0.2: 5.05744 pc, r_0.5: 9.8388 pc, r_0.9: 26.405 pc
+
+SCF tracer particle E_wrt_host: -0.866169 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.329696 [1e3 kpc (km/s)]
+cluster virial ratio: 1.99568
+
+alpha: 0.550081, b: 0.578261
+
+# of particles in core: 4298
+# of particles outside tidal radius = 151.814 pc: 1147
+# of particles included in setting up the SCF: 48913
+# of particles, E_wrt_cluster < 0: 48900
+=====================================================
+system_time: 1591.57 Myr, wall clock time 2025-10-28 16:37:19 UTC
+system_dt: 96.7438 Myr
+integration_dt: 1.767 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999958
+
+Rc: 3.27424 pc
+r_0.01: 1.43278 pc, r_0.1: 3.53124 pc, r_0.2: 5.01075 pc, r_0.5: 9.7992 pc, r_0.9: 26.4799 pc
+
+SCF tracer particle E_wrt_host: -0.866201 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.329671 [1e3 kpc (km/s)]
+cluster virial ratio: 16.5349
+
+alpha: 0.553408, b: 0.573456
+
+# of particles in core: 4245
+# of particles outside tidal radius = 57.0033 pc: 1433
+# of particles included in setting up the SCF: 48817
+# of particles, E_wrt_cluster < 0: 48800
+=====================================================
+system_time: 1688.31 Myr, wall clock time 2025-10-28 16:46:31 UTC
+system_dt: 91.4088 Myr
+integration_dt: 4.67953 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999957
+
+Rc: 3.24489 pc
+r_0.01: 1.4355 pc, r_0.1: 3.49996 pc, r_0.2: 4.96543 pc, r_0.5: 9.87371 pc, r_0.9: 27.0887 pc
+
+SCF tracer particle E_wrt_host: -0.866278 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.329431 [1e3 kpc (km/s)]
+cluster virial ratio: 4.13581
+
+alpha: 0.559089, b: 0.569048
+
+# of particles in core: 4271
+# of particles outside tidal radius = 109.749 pc: 1532
+# of particles included in setting up the SCF: 48607
+# of particles, E_wrt_cluster < 0: 48531
+=====================================================
+system_time: 1779.72 Myr, wall clock time 2025-10-28 16:52:26 UTC
+system_dt: 96.4534 Myr
+integration_dt: 4.5926 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999962
+
+Rc: 3.24944 pc
+r_0.01: 1.42624 pc, r_0.1: 3.52193 pc, r_0.2: 5.02342 pc, r_0.5: 9.77276 pc, r_0.9: 27.351 pc
+
+SCF tracer particle E_wrt_host: -0.866293 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.328873 [1e3 kpc (km/s)]
+cluster virial ratio: 3.75773
+
+alpha: 0.553612, b: 0.569953
+
+# of particles in core: 4204
+# of particles outside tidal radius = 112.533 pc: 1560
+# of particles included in setting up the SCF: 48494
+# of particles, E_wrt_cluster < 0: 48490
+=====================================================
+system_time: 1876.17 Myr, wall clock time 2025-10-28 16:59:07 UTC
+system_dt: 95.8363 Myr
+integration_dt: 2.57899 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999945
+
+Rc: 3.1895 pc
+r_0.01: 1.37979 pc, r_0.1: 3.46368 pc, r_0.2: 4.96816 pc, r_0.5: 9.77454 pc, r_0.9: 27.4403 pc
+
+SCF tracer particle E_wrt_host: -0.866394 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.328934 [1e3 kpc (km/s)]
+cluster virial ratio: 20.1518
+
+alpha: 0.560634, b: 0.564964
+
+# of particles in core: 4166
+# of particles outside tidal radius = 73.4511 pc: 1677
+# of particles included in setting up the SCF: 48449
+# of particles, E_wrt_cluster < 0: 48439
+=====================================================
+system_time: 1972.01 Myr, wall clock time 2025-10-28 17:08:20 UTC
+system_dt: 83.9228 Myr
+integration_dt: 4.49131 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999964
+
+Rc: 3.18891 pc
+r_0.01: 1.38434 pc, r_0.1: 3.47781 pc, r_0.2: 4.93542 pc, r_0.5: 9.75938 pc, r_0.9: 28.1795 pc
+
+SCF tracer particle E_wrt_host: -0.866374 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.328982 [1e3 kpc (km/s)]
+cluster virial ratio: 8.32391
+
+alpha: 0.559425, b: 0.560264
+
+# of particles in core: 4186
+# of particles outside tidal radius = 106.581 pc: 1862
+# of particles included in setting up the SCF: 48294
+# of particles, E_wrt_cluster < 0: 48160
+=====================================================
+system_time: 2055.93 Myr, wall clock time 2025-10-28 17:13:40 UTC
+system_dt: 82.3169 Myr
+integration_dt: 6.03409 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999896
+
+Rc: 3.11381 pc
+r_0.01: 1.36519 pc, r_0.1: 3.4184 pc, r_0.2: 4.88868 pc, r_0.5: 9.79283 pc, r_0.9: 28.4724 pc
+
+SCF tracer particle E_wrt_host: -0.866395 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.329126 [1e3 kpc (km/s)]
+cluster virial ratio: 5.03612
+
+alpha: 0.566019, b: 0.556641
+
+# of particles in core: 4071
+# of particles outside tidal radius = 129.589 pc: 1944
+# of particles included in setting up the SCF: 48137
+# of particles, E_wrt_cluster < 0: 48119
+=====================================================
+system_time: 2138.25 Myr, wall clock time 2025-10-28 17:19:22 UTC
+system_dt: 92.7425 Myr
+integration_dt: 2.83883 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999964
+
+Rc: 3.12167 pc
+r_0.01: 1.34861 pc, r_0.1: 3.39605 pc, r_0.2: 4.87858 pc, r_0.5: 9.75388 pc, r_0.9: 28.6631 pc
+
+SCF tracer particle E_wrt_host: -0.866316 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.329312 [1e3 kpc (km/s)]
+cluster virial ratio: 15.0367
+
+alpha: 0.568693, b: 0.554102
+
+# of particles in core: 4169
+# of particles outside tidal radius = 86.0992 pc: 2013
+# of particles included in setting up the SCF: 48091
+# of particles, E_wrt_cluster < 0: 48076
+=====================================================
+system_time: 2230.99 Myr, wall clock time 2025-10-28 17:29:02 UTC
+system_dt: 76.2653 Myr
+integration_dt: 2.87876 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999895
+
+Rc: 3.06699 pc
+r_0.01: 1.34866 pc, r_0.1: 3.41126 pc, r_0.2: 4.9005 pc, r_0.5: 9.81911 pc, r_0.9: 29.6865 pc
+
+SCF tracer particle E_wrt_host: -0.866372 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.329192 [1e3 kpc (km/s)]
+cluster virial ratio: 27.6049
+
+alpha: 0.567625, b: 0.553805
+
+# of particles in core: 4014
+# of particles outside tidal radius = 94.4654 pc: 2202
+# of particles included in setting up the SCF: 47977
+# of particles, E_wrt_cluster < 0: 47771
+=====================================================
+system_time: 2307.26 Myr, wall clock time 2025-10-28 17:34:09 UTC
+system_dt: 77.4684 Myr
+integration_dt: 5.9901 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.99994
+
+Rc: 3.04642 pc
+r_0.01: 1.35654 pc, r_0.1: 3.37575 pc, r_0.2: 4.84971 pc, r_0.5: 9.77935 pc, r_0.9: 29.9929 pc
+
+SCF tracer particle E_wrt_host: -0.866399 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.328973 [1e3 kpc (km/s)]
+cluster virial ratio: 8.29652
+
+alpha: 0.571994, b: 0.546743
+
+# of particles in core: 4013
+# of particles outside tidal radius = 128.448 pc: 2378
+# of particles included in setting up the SCF: 47759
+# of particles, E_wrt_cluster < 0: 47688
+=====================================================
+system_time: 2384.73 Myr, wall clock time 2025-10-28 17:39:03 UTC
+system_dt: 81.8731 Myr
+integration_dt: 5.45942 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999954
+
+Rc: 3.04294 pc
+r_0.01: 1.34194 pc, r_0.1: 3.37265 pc, r_0.2: 4.81456 pc, r_0.5: 9.75914 pc, r_0.9: 30.2145 pc
+
+SCF tracer particle E_wrt_host: -0.866354 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.32957 [1e3 kpc (km/s)]
+cluster virial ratio: 11.1626
+
+alpha: 0.570482, b: 0.544889
+
+# of particles in core: 4031
+# of particles outside tidal radius = 120.358 pc: 2409
+# of particles included in setting up the SCF: 47655
+# of particles, E_wrt_cluster < 0: 47639
+=====================================================
+system_time: 2466.6 Myr, wall clock time 2025-10-28 17:45:26 UTC
+system_dt: 69.3209 Myr
+integration_dt: 2.09965 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999966
+
+Rc: 3.00198 pc
+r_0.01: 1.3175 pc, r_0.1: 3.34355 pc, r_0.2: 4.81238 pc, r_0.5: 9.74646 pc, r_0.9: 30.3511 pc
+
+SCF tracer particle E_wrt_host: -0.866349 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.329352 [1e3 kpc (km/s)]
+cluster virial ratio: 57.5076
+
+alpha: 0.572544, b: 0.542803
+
+# of particles in core: 3947
+# of particles outside tidal radius = 63.6081 pc: 2610
+# of particles included in setting up the SCF: 47581
+# of particles, E_wrt_cluster < 0: 47561
+=====================================================
+system_time: 2535.92 Myr, wall clock time 2025-10-28 17:52:48 UTC
+system_dt: 68.4767 Myr
+integration_dt: 2.83024 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999889
+
+Rc: 2.94519 pc
+r_0.01: 1.29192 pc, r_0.1: 3.34387 pc, r_0.2: 4.78791 pc, r_0.5: 9.74607 pc, r_0.9: 30.9878 pc
+
+SCF tracer particle E_wrt_host: -0.866425 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.32916 [1e3 kpc (km/s)]
+cluster virial ratio: 38.3415
+
+alpha: 0.574201, b: 0.539535
+
+# of particles in core: 3821
+# of particles outside tidal radius = 80.1832 pc: 2799
+# of particles included in setting up the SCF: 47415
+# of particles, E_wrt_cluster < 0: 47322
+=====================================================
+system_time: 2604.4 Myr, wall clock time 2025-10-28 17:57:47 UTC
+system_dt: 76.5542 Myr
+integration_dt: 5.73766 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999902
+
+Rc: 2.93608 pc
+r_0.01: 1.28385 pc, r_0.1: 3.32976 pc, r_0.2: 4.79732 pc, r_0.5: 9.70093 pc, r_0.9: 31.3012 pc
+
+SCF tracer particle E_wrt_host: -0.866431 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.328981 [1e3 kpc (km/s)]
+cluster virial ratio: 13.2801
+
+alpha: 0.57479, b: 0.537283
+
+# of particles in core: 3845
+# of particles outside tidal radius = 124.159 pc: 2799
+# of particles included in setting up the SCF: 47292
+# of particles, E_wrt_cluster < 0: 47244
+=====================================================
+system_time: 2680.95 Myr, wall clock time 2025-10-28 18:02:51 UTC
+system_dt: 85.672 Myr
+integration_dt: 5.53844 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999959
+
+Rc: 2.96413 pc
+r_0.01: 1.29356 pc, r_0.1: 3.29625 pc, r_0.2: 4.73188 pc, r_0.5: 9.69628 pc, r_0.9: 31.6162 pc
+
+SCF tracer particle E_wrt_host: -0.86645 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.329107 [1e3 kpc (km/s)]
+cluster virial ratio: 16.3936
+
+alpha: 0.578338, b: 0.531888
+
+# of particles in core: 4012
+# of particles outside tidal radius = 121.468 pc: 2834
+# of particles included in setting up the SCF: 47221
+# of particles, E_wrt_cluster < 0: 47211
+=====================================================
+system_time: 2766.62 Myr, wall clock time 2025-10-28 18:09:23 UTC
+system_dt: 71.0141 Myr
+integration_dt: 2.02071 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999968
+
+Rc: 2.93876 pc
+r_0.01: 1.30389 pc, r_0.1: 3.28988 pc, r_0.2: 4.71835 pc, r_0.5: 9.68091 pc, r_0.9: 31.7402 pc
+
+SCF tracer particle E_wrt_host: -0.86636 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.329518 [1e3 kpc (km/s)]
+cluster virial ratio: 79.8643
+
+alpha: 0.579784, b: 0.531216
+
+# of particles in core: 3941
+# of particles outside tidal radius = 62.2829 pc: 3030
+# of particles included in setting up the SCF: 47168
+# of particles, E_wrt_cluster < 0: 47153
+=====================================================
+system_time: 2837.64 Myr, wall clock time 2025-10-28 18:16:49 UTC
+system_dt: 69.4212 Myr
+integration_dt: 4.10111 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999974
+
+Rc: 2.86102 pc
+r_0.01: 1.27082 pc, r_0.1: 3.25705 pc, r_0.2: 4.69176 pc, r_0.5: 9.73849 pc, r_0.9: 33.8245 pc
+
+SCF tracer particle E_wrt_host: -0.866325 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.329259 [1e3 kpc (km/s)]
+cluster virial ratio: 41.3037
+
+alpha: 0.583521, b: 0.52637
+
+# of particles in core: 3790
+# of particles outside tidal radius = 100.171 pc: 3193
+# of particles included in setting up the SCF: 47007
+# of particles, E_wrt_cluster < 0: 46870
+=====================================================
+system_time: 2907.06 Myr, wall clock time 2025-10-28 18:22:03 UTC
+system_dt: 79.6285 Myr
+integration_dt: 4.34577 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999969
+
+Rc: 2.83167 pc
+r_0.01: 1.27663 pc, r_0.1: 3.23242 pc, r_0.2: 4.66404 pc, r_0.5: 9.73402 pc, r_0.9: 34.2091 pc
+
+SCF tracer particle E_wrt_host: -0.866319 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.32964 [1e3 kpc (km/s)]
+cluster virial ratio: 17.4142
+
+alpha: 0.589794, b: 0.52184
+
+# of particles in core: 3771
+# of particles outside tidal radius = 111.805 pc: 3282
+# of particles included in setting up the SCF: 46887
+# of particles, E_wrt_cluster < 0: 46821
+=====================================================
+system_time: 2986.69 Myr, wall clock time 2025-10-28 18:27:27 UTC
+system_dt: 80.095 Myr
+integration_dt: 4.55725 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999935
+
+Rc: 2.82181 pc
+r_0.01: 1.25596 pc, r_0.1: 3.21267 pc, r_0.2: 4.63606 pc, r_0.5: 9.74611 pc, r_0.9: 34.4566 pc
+
+SCF tracer particle E_wrt_host: -0.866323 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.329618 [1e3 kpc (km/s)]
+cluster virial ratio: 32.4404
+
+alpha: 0.590829, b: 0.520392
+
+# of particles in core: 3770
+# of particles outside tidal radius = 108.992 pc: 3289
+# of particles included in setting up the SCF: 46787
+# of particles, E_wrt_cluster < 0: 46771
+=====================================================
+system_time: 3066.78 Myr, wall clock time 2025-10-28 18:34:44 UTC
+system_dt: 68.9297 Myr
+integration_dt: 1.62023 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999956
+
+Rc: 2.78161 pc
+r_0.01: 1.25542 pc, r_0.1: 3.15567 pc, r_0.2: 4.63205 pc, r_0.5: 9.62963 pc, r_0.9: 34.3883 pc
+
+SCF tracer particle E_wrt_host: -0.866344 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.33003 [1e3 kpc (km/s)]
+cluster virial ratio: 122.126
+
+alpha: 0.592798, b: 0.515441
+
+# of particles in core: 3775
+# of particles outside tidal radius = 52.872 pc: 3677
+# of particles included in setting up the SCF: 46678
+# of particles, E_wrt_cluster < 0: 46595
+=====================================================
+system_time: 3135.71 Myr, wall clock time 2025-10-28 18:41:04 UTC
+system_dt: 66.4548 Myr
+integration_dt: 4.27203 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999961
+
+Rc: 2.77154 pc
+r_0.01: 1.25835 pc, r_0.1: 3.20238 pc, r_0.2: 4.6274 pc, r_0.5: 9.70095 pc, r_0.9: 36.5207 pc
+
+SCF tracer particle E_wrt_host: -0.866382 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.329599 [1e3 kpc (km/s)]
+cluster virial ratio: 56.8377
+
+alpha: 0.58825, b: 0.515817
+
+# of particles in core: 3587
+# of particles outside tidal radius = 101.145 pc: 3722
+# of particles included in setting up the SCF: 46451
+# of particles, E_wrt_cluster < 0: 46352
+=====================================================
+system_time: 3202.17 Myr, wall clock time 2025-10-28 18:45:38 UTC
+system_dt: 43.1867 Myr
+integration_dt: 4.43555 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999969
+
+Rc: 2.73536 pc
+r_0.01: 1.22015 pc, r_0.1: 3.1764 pc, r_0.2: 4.61675 pc, r_0.5: 9.72289 pc, r_0.9: 36.8758 pc
+
+SCF tracer particle E_wrt_host: -0.866487 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.32973 [1e3 kpc (km/s)]
+cluster virial ratio: 28.4574
+
+alpha: 0.595723, b: 0.513229
+
+# of particles in core: 3670
+# of particles outside tidal radius = 109.673 pc: 3759
+# of particles included in setting up the SCF: 46412
+# of particles, E_wrt_cluster < 0: 46305
+=====================================================
+system_time: 3245.35 Myr, wall clock time 2025-10-28 18:48:30 UTC
+system_dt: 61.2226 Myr
+integration_dt: 5.46425 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999949
+
+Rc: 2.73855 pc
+r_0.01: 1.21847 pc, r_0.1: 3.16827 pc, r_0.2: 4.59021 pc, r_0.5: 9.73622 pc, r_0.9: 36.8181 pc
+
+SCF tracer particle E_wrt_host: -0.866529 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.329383 [1e3 kpc (km/s)]
+cluster virial ratio: 31.155
+
+alpha: 0.596383, b: 0.512683
+
+# of particles in core: 3713
+# of particles outside tidal radius = 119.695 pc: 3752
+# of particles included in setting up the SCF: 46300
+# of particles, E_wrt_cluster < 0: 46283
+=====================================================
+system_time: 3306.57 Myr, wall clock time 2025-10-28 18:52:45 UTC
+system_dt: 65.9921 Myr
+integration_dt: 3.88785 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.99996
+
+Rc: 2.69587 pc
+r_0.01: 1.25054 pc, r_0.1: 3.13635 pc, r_0.2: 4.55264 pc, r_0.5: 9.69067 pc, r_0.9: 37.3174 pc
+
+SCF tracer particle E_wrt_host: -0.866556 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.328896 [1e3 kpc (km/s)]
+cluster virial ratio: 72.9046
+
+alpha: 0.598732, b: 0.508041
+
+# of particles in core: 3557
+# of particles outside tidal radius = 95.7789 pc: 3803
+# of particles included in setting up the SCF: 46261
+# of particles, E_wrt_cluster < 0: 46259
+=====================================================
+system_time: 3372.57 Myr, wall clock time 2025-10-28 18:59:37 UTC
+system_dt: 63.2126 Myr
+integration_dt: 1.48588 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999859
+
+Rc: 2.68095 pc
+r_0.01: 1.23804 pc, r_0.1: 3.13972 pc, r_0.2: 4.56484 pc, r_0.5: 9.70578 pc, r_0.9: 37.986 pc
+
+SCF tracer particle E_wrt_host: -0.86656 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.328978 [1e3 kpc (km/s)]
+cluster virial ratio: 166.138
+
+alpha: 0.59902, b: 0.507378
+
+# of particles in core: 3585
+# of particles outside tidal radius = 49.8211 pc: 4269
+# of particles included in setting up the SCF: 46196
+# of particles, E_wrt_cluster < 0: 46104
+=====================================================
+system_time: 3435.78 Myr, wall clock time 2025-10-28 19:05:33 UTC
+system_dt: 62.9646 Myr
+integration_dt: 4.81491 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.99996
+
+Rc: 2.67561 pc
+r_0.01: 1.22138 pc, r_0.1: 3.12596 pc, r_0.2: 4.55031 pc, r_0.5: 9.69822 pc, r_0.9: 41.6877 pc
+
+SCF tracer particle E_wrt_host: -0.866669 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.328947 [1e3 kpc (km/s)]
+cluster virial ratio: 66.6309
+
+alpha: 0.598383, b: 0.503861
+
+# of particles in core: 3558
+# of particles outside tidal radius = 109.817 pc: 4098
+# of particles included in setting up the SCF: 46040
+# of particles, E_wrt_cluster < 0: 45953
+=====================================================
+system_time: 3498.74 Myr, wall clock time 2025-10-28 19:09:45 UTC
+system_dt: 60.4533 Myr
+integration_dt: 6.04842 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999921
+
+Rc: 2.65255 pc
+r_0.01: 1.22659 pc, r_0.1: 3.10581 pc, r_0.2: 4.5423 pc, r_0.5: 9.7027 pc, r_0.9: 41.4746 pc
+
+SCF tracer particle E_wrt_host: -0.866654 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.328781 [1e3 kpc (km/s)]
+cluster virial ratio: 34.8795
+
+alpha: 0.601824, b: 0.500957
+
+# of particles in core: 3576
+# of particles outside tidal radius = 128.05 pc: 4151
+# of particles included in setting up the SCF: 45945
+# of particles, E_wrt_cluster < 0: 45918
+=====================================================
+system_time: 3559.2 Myr, wall clock time 2025-10-28 19:13:52 UTC
+system_dt: 39.8211 Myr
+integration_dt: 5.05188 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999884
+
+Rc: 2.55539 pc
+r_0.01: 1.16658 pc, r_0.1: 3.05923 pc, r_0.2: 4.48488 pc, r_0.5: 9.69105 pc, r_0.9: 42.1926 pc
+
+SCF tracer particle E_wrt_host: -0.866693 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.32855 [1e3 kpc (km/s)]
+cluster virial ratio: 51.4134
+
+alpha: 0.609718, b: 0.496987
+
+# of particles in core: 3397
+# of particles outside tidal radius = 135.532 pc: 4158
+# of particles included in setting up the SCF: 45881
+# of particles, E_wrt_cluster < 0: 45874
+=====================================================
+system_time: 3599.02 Myr, wall clock time 2025-10-28 19:16:50 UTC
+system_dt: 55.8903 Myr
+integration_dt: 4.2999 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.99995
+
+Rc: 2.60472 pc
+r_0.01: 1.14588 pc, r_0.1: 3.07289 pc, r_0.2: 4.47718 pc, r_0.5: 9.63827 pc, r_0.9: 41.9329 pc
+
+SCF tracer particle E_wrt_host: -0.866704 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.328493 [1e3 kpc (km/s)]
+cluster virial ratio: 89.472
+
+alpha: 0.608625, b: 0.495754
+
+# of particles in core: 3468
+# of particles outside tidal radius = 116.648 pc: 4185
+# of particles included in setting up the SCF: 45860
+# of particles, E_wrt_cluster < 0: 45856
+=====================================================
+system_time: 3654.91 Myr, wall clock time 2025-10-28 19:22:34 UTC
+system_dt: 48.8009 Myr
+integration_dt: 1.37886 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999917
+
+Rc: 2.54819 pc
+r_0.01: 1.15801 pc, r_0.1: 3.0199 pc, r_0.2: 4.43553 pc, r_0.5: 9.67878 pc, r_0.9: 41.4195 pc
+
+SCF tracer particle E_wrt_host: -0.866568 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.328492 [1e3 kpc (km/s)]
+cluster virial ratio: 205.493
+
+alpha: 0.612685, b: 0.493018
+
+# of particles in core: 3444
+# of particles outside tidal radius = 47.2573 pc: 4724
+# of particles included in setting up the SCF: 45782
+# of particles, E_wrt_cluster < 0: 45701
+=====================================================
+system_time: 3703.71 Myr, wall clock time 2025-10-28 19:28:00 UTC
+system_dt: 60.5334 Myr
+integration_dt: 3.06646 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999964
+
+Rc: 2.51816 pc
+r_0.01: 1.16707 pc, r_0.1: 3.02041 pc, r_0.2: 4.4504 pc, r_0.5: 9.72002 pc, r_0.9: 55.7681 pc
+
+SCF tracer particle E_wrt_host: -0.866662 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.328495 [1e3 kpc (km/s)]
+cluster virial ratio: 111.269
+
+alpha: 0.615252, b: 0.489566
+
+# of particles in core: 3409
+# of particles outside tidal radius = 84.7198 pc: 4653
+# of particles included in setting up the SCF: 45691
+# of particles, E_wrt_cluster < 0: 45498
+=====================================================
+system_time: 3764.24 Myr, wall clock time 2025-10-28 19:32:25 UTC
+system_dt: 67.6034 Myr
+integration_dt: 5.17606 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.99995
+
+Rc: 2.50458 pc
+r_0.01: 1.19377 pc, r_0.1: 3.01519 pc, r_0.2: 4.4138 pc, r_0.5: 9.70751 pc, r_0.9: 53.624 pc
+
+SCF tracer particle E_wrt_host: -0.866694 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.328651 [1e3 kpc (km/s)]
+cluster virial ratio: 59.0463
+
+alpha: 0.614199, b: 0.487799
+
+# of particles in core: 3363
+# of particles outside tidal radius = 116.387 pc: 4661
+# of particles included in setting up the SCF: 45518
+# of particles, E_wrt_cluster < 0: 45427
+=====================================================
+system_time: 3831.85 Myr, wall clock time 2025-10-28 19:37:08 UTC
+system_dt: 56.9519 Myr
+integration_dt: 5.39298 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.99994
+
+Rc: 2.50742 pc
+r_0.01: 1.18639 pc, r_0.1: 3.01947 pc, r_0.2: 4.41752 pc, r_0.5: 9.81153 pc, r_0.9: 54.7795 pc
+
+SCF tracer particle E_wrt_host: -0.866723 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.329072 [1e3 kpc (km/s)]
+cluster virial ratio: 61.2072
+
+alpha: 0.617407, b: 0.487352
+
+# of particles in core: 3381
+# of particles outside tidal radius = 118.292 pc: 4670
+# of particles included in setting up the SCF: 45398
+# of particles, E_wrt_cluster < 0: 45381
+=====================================================
+system_time: 3888.8 Myr, wall clock time 2025-10-28 19:41:15 UTC
+system_dt: 40.7045 Myr
+integration_dt: 3.46357 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.99994
+
+Rc: 2.47963 pc
+r_0.01: 1.16832 pc, r_0.1: 2.99953 pc, r_0.2: 4.41227 pc, r_0.5: 9.70983 pc, r_0.9: 55.2814 pc
+
+SCF tracer particle E_wrt_host: -0.866652 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.329637 [1e3 kpc (km/s)]
+cluster virial ratio: 129.223
+
+alpha: 0.619282, b: 0.485346
+
+# of particles in core: 3326
+# of particles outside tidal radius = 88.8866 pc: 4728
+# of particles included in setting up the SCF: 45359
+# of particles, E_wrt_cluster < 0: 45352
+=====================================================
+system_time: 3929.5 Myr, wall clock time 2025-10-28 19:44:47 UTC
+system_dt: 48.2398 Myr
+integration_dt: 2.21423 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999951
+
+Rc: 2.46847 pc
+r_0.01: 1.14714 pc, r_0.1: 2.97962 pc, r_0.2: 4.37472 pc, r_0.5: 9.68414 pc, r_0.9: 58.2538 pc
+
+SCF tracer particle E_wrt_host: -0.866611 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.329732 [1e3 kpc (km/s)]
+cluster virial ratio: 210.447
+
+alpha: 0.619482, b: 0.481652
+
+# of particles in core: 3336
+# of particles outside tidal radius = 64.6469 pc: 4910
+# of particles included in setting up the SCF: 45320
+# of particles, E_wrt_cluster < 0: 45309
+=====================================================
+system_time: 3977.74 Myr, wall clock time 2025-10-28 19:50:03 UTC
+system_dt: 63.2957 Myr
+integration_dt: 2.3262 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999945
+
+Rc: 2.40447 pc
+r_0.01: 1.13183 pc, r_0.1: 2.941 pc, r_0.2: 4.3608 pc, r_0.5: 9.72928 pc, r_0.9: 82.6379 pc
+
+SCF tracer particle E_wrt_host: -0.866753 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.329813 [1e3 kpc (km/s)]
+cluster virial ratio: 205.167
+
+alpha: 0.625052, b: 0.478596
+
+# of particles in core: 3258
+# of particles outside tidal radius = 66.7769 pc: 5138
+# of particles included in setting up the SCF: 45201
+# of particles, E_wrt_cluster < 0: 45057
+=====================================================
+system_time: 4041.04 Myr, wall clock time 2025-10-28 19:55:07 UTC
+system_dt: 54.8923 Myr
+integration_dt: 4.95731 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999966
+
+Rc: 2.41662 pc
+r_0.01: 1.13341 pc, r_0.1: 2.92621 pc, r_0.2: 4.36693 pc, r_0.5: 9.70687 pc, r_0.9: 172.853 pc
+
+SCF tracer particle E_wrt_host: -0.866739 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.329377 [1e3 kpc (km/s)]
+cluster virial ratio: 94.8867
+
+alpha: 0.626313, b: 0.475815
+
+# of particles in core: 3352
+# of particles outside tidal radius = 111.879 pc: 5122
+# of particles included in setting up the SCF: 45010
+# of particles, E_wrt_cluster < 0: 44939
+=====================================================
+system_time: 4095.93 Myr, wall clock time 2025-10-28 19:58:54 UTC
+system_dt: 42.0714 Myr
+integration_dt: 5.54821 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999871
+
+Rc: 2.40062 pc
+r_0.01: 1.15483 pc, r_0.1: 2.93683 pc, r_0.2: 4.33067 pc, r_0.5: 9.69637 pc, r_0.9: 315.57 pc
+
+SCF tracer particle E_wrt_host: -0.866683 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.330044 [1e3 kpc (km/s)]
+cluster virial ratio: 66.7692
+
+alpha: 0.622972, b: 0.474123
+
+# of particles in core: 3270
+# of particles outside tidal radius = 121.507 pc: 5156
+# of particles included in setting up the SCF: 44936
+# of particles, E_wrt_cluster < 0: 44916
+=====================================================
+system_time: 4138 Myr, wall clock time 2025-10-28 20:01:49 UTC
+system_dt: 52.0593 Myr
+integration_dt: 5.09637 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999941
+
+Rc: 2.37011 pc
+r_0.01: 1.11671 pc, r_0.1: 2.92918 pc, r_0.2: 4.30946 pc, r_0.5: 9.67394 pc, r_0.9: 505.939 pc
+
+SCF tracer particle E_wrt_host: -0.866699 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.329941 [1e3 kpc (km/s)]
+cluster virial ratio: 85.9028
+
+alpha: 0.628214, b: 0.471572
+
+# of particles in core: 3216
+# of particles outside tidal radius = 115.482 pc: 5173
+# of particles included in setting up the SCF: 44907
+# of particles, E_wrt_cluster < 0: 44890
+=====================================================
+system_time: 4190.06 Myr, wall clock time 2025-10-28 20:05:43 UTC
+system_dt: 45.2923 Myr
+integration_dt: 3.84192 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999943
+
+Rc: 2.38133 pc
+r_0.01: 1.10472 pc, r_0.1: 2.89903 pc, r_0.2: 4.29989 pc, r_0.5: 9.69573 pc, r_0.9: 893.407 pc
+
+SCF tracer particle E_wrt_host: -0.866632 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.329984 [1e3 kpc (km/s)]
+cluster virial ratio: 149.941
+
+alpha: 0.630199, b: 0.470778
+
+# of particles in core: 3265
+# of particles outside tidal radius = 93.7997 pc: 5207
+# of particles included in setting up the SCF: 44862
+# of particles, E_wrt_cluster < 0: 44851
+=====================================================
+system_time: 4235.35 Myr, wall clock time 2025-10-28 20:10:29 UTC
+system_dt: 53.9135 Myr
+integration_dt: 1.41899 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999876
+
+Rc: 2.3606 pc
+r_0.01: 1.12434 pc, r_0.1: 2.90175 pc, r_0.2: 4.28484 pc, r_0.5: 9.65135 pc, r_0.9: 1668.79 pc
+
+SCF tracer particle E_wrt_host: -0.866578 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.330136 [1e3 kpc (km/s)]
+cluster virial ratio: 291.737
+
+alpha: 0.62853, b: 0.469001
+
+# of particles in core: 3263
+# of particles outside tidal radius = 47.9027 pc: 5696
+# of particles included in setting up the SCF: 44811
+# of particles, E_wrt_cluster < 0: 44767
+=====================================================
+system_time: 4289.27 Myr, wall clock time 2025-10-28 20:16:39 UTC
+system_dt: 31.1243 Myr
+integration_dt: 3.80526 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999936
+
+Rc: 2.32903 pc
+r_0.01: 1.10781 pc, r_0.1: 2.88047 pc, r_0.2: 4.29858 pc, r_0.5: 9.67747 pc, r_0.9: 1030.02 pc
+
+SCF tracer particle E_wrt_host: -0.86675 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.330115 [1e3 kpc (km/s)]
+cluster virial ratio: 158.552
+
+alpha: 0.629576, b: 0.465503
+
+# of particles in core: 3175
+# of particles outside tidal radius = 93.0163 pc: 5531
+# of particles included in setting up the SCF: 44681
+# of particles, E_wrt_cluster < 0: 44532
+=====================================================
+system_time: 4320.39 Myr, wall clock time 2025-10-28 20:19:13 UTC
+system_dt: 53.1935 Myr
+integration_dt: 4.79851 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999945
+
+Rc: 2.31325 pc
+r_0.01: 1.10489 pc, r_0.1: 2.86536 pc, r_0.2: 4.27469 pc, r_0.5: 9.62178 pc, r_0.9: 652.071 pc
+
+SCF tracer particle E_wrt_host: -0.866748 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.330084 [1e3 kpc (km/s)]
+cluster virial ratio: 123.013
+
+alpha: 0.631076, b: 0.462614
+
+# of particles in core: 3202
+# of particles outside tidal radius = 132.256 pc: 5522
+# of particles included in setting up the SCF: 44628
+# of particles, E_wrt_cluster < 0: 44499
+=====================================================
+system_time: 4373.59 Myr, wall clock time 2025-10-28 20:22:55 UTC
+system_dt: 58.0377 Myr
+integration_dt: 6.45153 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999959
+
+Rc: 2.31322 pc
+r_0.01: 1.09455 pc, r_0.1: 2.86673 pc, r_0.2: 4.26773 pc, r_0.5: 9.72814 pc, r_0.9: 536.727 pc
+
+SCF tracer particle E_wrt_host: -0.866813 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.329488 [1e3 kpc (km/s)]
+cluster virial ratio: 88.9802
+
+alpha: 0.635944, b: 0.462429
+
+# of particles in core: 3194
+# of particles outside tidal radius = 142.213 pc: 5599
+# of particles included in setting up the SCF: 44538
+# of particles, E_wrt_cluster < 0: 44467
+=====================================================
+system_time: 4431.62 Myr, wall clock time 2025-10-28 20:26:45 UTC
+system_dt: 49.7296 Myr
+integration_dt: 5.90249 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999964
+
+Rc: 2.29806 pc
+r_0.01: 1.10583 pc, r_0.1: 2.85214 pc, r_0.2: 4.27686 pc, r_0.5: 9.69951 pc, r_0.9: 1097.51 pc
+
+SCF tracer particle E_wrt_host: -0.866778 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.329581 [1e3 kpc (km/s)]
+cluster virial ratio: 115.324
+
+alpha: 0.635547, b: 0.463022
+
+# of particles in core: 3167
+# of particles outside tidal radius = 125.289 pc: 5631
+# of particles included in setting up the SCF: 44437
+# of particles, E_wrt_cluster < 0: 44422
+=====================================================
+system_time: 4481.35 Myr, wall clock time 2025-10-28 20:30:23 UTC
+system_dt: 52.0543 Myr
+integration_dt: 3.72766 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999878
+
+Rc: 2.26341 pc
+r_0.01: 1.10911 pc, r_0.1: 2.85189 pc, r_0.2: 4.24545 pc, r_0.5: 9.69701 pc, r_0.9: 2042.45 pc
+
+SCF tracer particle E_wrt_host: -0.866839 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.329857 [1e3 kpc (km/s)]
+cluster virial ratio: 199.551
+
+alpha: 0.636683, b: 0.461415
+
+# of particles in core: 3103
+# of particles outside tidal radius = 90.9498 pc: 5698
+# of particles included in setting up the SCF: 44392
+# of particles, E_wrt_cluster < 0: 44383
+=====================================================
+system_time: 4533.41 Myr, wall clock time 2025-10-28 20:36:06 UTC
+system_dt: 45.8002 Myr
+integration_dt: 1.54691 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999874
+
+Rc: 2.14982 pc
+r_0.01: 1.03931 pc, r_0.1: 2.8197 pc, r_0.2: 4.21117 pc, r_0.5: 9.67169 pc, r_0.9: 3332.12 pc
+
+SCF tracer particle E_wrt_host: -0.866839 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.329565 [1e3 kpc (km/s)]
+cluster virial ratio: 333.862
+
+alpha: 0.645264, b: 0.455722
+
+# of particles in core: 2829
+# of particles outside tidal radius = 51.5877 pc: 6158
+# of particles included in setting up the SCF: 44310
+# of particles, E_wrt_cluster < 0: 44209
+=====================================================
+system_time: 4579.21 Myr, wall clock time 2025-10-28 20:41:04 UTC
+system_dt: 34.3868 Myr
+integration_dt: 3.30332 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999952
+
+Rc: 2.20241 pc
+r_0.01: 1.06898 pc, r_0.1: 2.82792 pc, r_0.2: 4.21416 pc, r_0.5: 9.67754 pc, r_0.9: 2240.61 pc
+
+SCF tracer particle E_wrt_host: -0.866824 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.329904 [1e3 kpc (km/s)]
+cluster virial ratio: 225.242
+
+alpha: 0.640277, b: 0.45448
+
+# of particles in core: 2964
+# of particles outside tidal radius = 84.3839 pc: 6072
+# of particles included in setting up the SCF: 44155
+# of particles, E_wrt_cluster < 0: 44043
+=====================================================
+system_time: 4613.59 Myr, wall clock time 2025-10-28 20:43:44 UTC
+system_dt: 33.8097 Myr
+integration_dt: 4.55409 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999947
+
+Rc: 2.1774 pc
+r_0.01: 1.06046 pc, r_0.1: 2.78439 pc, r_0.2: 4.17488 pc, r_0.5: 9.69684 pc, r_0.9: 1564.81 pc
+
+SCF tracer particle E_wrt_host: -0.866798 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.329725 [1e3 kpc (km/s)]
+cluster virial ratio: 171.689
+
+alpha: 0.647198, b: 0.450746
+
+# of particles in core: 3018
+# of particles outside tidal radius = 104.062 pc: 6073
+# of particles included in setting up the SCF: 44046
+# of particles, E_wrt_cluster < 0: 43997
+=====================================================
+system_time: 4647.4 Myr, wall clock time 2025-10-28 20:46:13 UTC
+system_dt: 43.6487 Myr
+integration_dt: 5.47092 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999937
+
+Rc: 2.16577 pc
+r_0.01: 1.06698 pc, r_0.1: 2.79595 pc, r_0.2: 4.1924 pc, r_0.5: 9.69605 pc, r_0.9: 1153.42 pc
+
+SCF tracer particle E_wrt_host: -0.866829 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.329017 [1e3 kpc (km/s)]
+cluster virial ratio: 135.627
+
+alpha: 0.646497, b: 0.45094
+
+# of particles in core: 2961
+# of particles outside tidal radius = 117.328 pc: 6086
+# of particles included in setting up the SCF: 44016
+# of particles, E_wrt_cluster < 0: 43976
+=====================================================
+system_time: 4691.05 Myr, wall clock time 2025-10-28 20:49:12 UTC
+system_dt: 32.3816 Myr
+integration_dt: 5.88656 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.99994
+
+Rc: 2.1831 pc
+r_0.01: 1.07361 pc, r_0.1: 2.79584 pc, r_0.2: 4.19431 pc, r_0.5: 9.68355 pc, r_0.9: 1251.85 pc
+
+SCF tracer particle E_wrt_host: -0.866843 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.32822 [1e3 kpc (km/s)]
+cluster virial ratio: 123.405
+
+alpha: 0.644082, b: 0.450884
+
+# of particles in core: 3020
+# of particles outside tidal radius = 123.08 pc: 6103
+# of particles included in setting up the SCF: 43974
+# of particles, E_wrt_cluster < 0: 43944
+=====================================================
+system_time: 4723.43 Myr, wall clock time 2025-10-28 20:51:30 UTC
+system_dt: 37.0391 Myr
+integration_dt: 5.57588 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999893
+
+Rc: 2.14766 pc
+r_0.01: 1.04679 pc, r_0.1: 2.78734 pc, r_0.2: 4.16847 pc, r_0.5: 9.67954 pc, r_0.9: 1791.29 pc
+
+SCF tracer particle E_wrt_host: -0.866855 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.327663 [1e3 kpc (km/s)]
+cluster virial ratio: 146.361
+
+alpha: 0.645381, b: 0.448699
+
+# of particles in core: 2910
+# of particles outside tidal radius = 118.716 pc: 6121
+# of particles included in setting up the SCF: 43943
+# of particles, E_wrt_cluster < 0: 43926
+=====================================================
+system_time: 4760.47 Myr, wall clock time 2025-10-28 20:54:29 UTC
+system_dt: 40.566 Myr
+integration_dt: 4.56327 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999943
+
+Rc: 2.15084 pc
+r_0.01: 1.06035 pc, r_0.1: 2.78009 pc, r_0.2: 4.14898 pc, r_0.5: 9.63912 pc, r_0.9: 2767.39 pc
+
+SCF tracer particle E_wrt_host: -0.866849 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.327683 [1e3 kpc (km/s)]
+cluster virial ratio: 199.086
+
+alpha: 0.646562, b: 0.447867
+
+# of particles in core: 2929
+# of particles outside tidal radius = 104.117 pc: 6144
+# of particles included in setting up the SCF: 43903
+# of particles, E_wrt_cluster < 0: 43899
+=====================================================
+system_time: 4801.04 Myr, wall clock time 2025-10-28 20:58:02 UTC
+system_dt: 32.2304 Myr
+integration_dt: 2.54855 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.99991
+
+Rc: 2.1588 pc
+r_0.01: 1.04573 pc, r_0.1: 2.74509 pc, r_0.2: 4.1359 pc, r_0.5: 9.6673 pc, r_0.9: 4414.71 pc
+
+SCF tracer particle E_wrt_host: -0.866878 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.327631 [1e3 kpc (km/s)]
+cluster virial ratio: 292.75
+
+alpha: 0.651428, b: 0.445704
+
+# of particles in core: 3004
+# of particles outside tidal radius = 71.5865 pc: 6252
+# of particles included in setting up the SCF: 43875
+# of particles, E_wrt_cluster < 0: 43865
+=====================================================
+system_time: 4833.27 Myr, wall clock time 2025-10-28 21:01:52 UTC
+system_dt: 38.293 Myr
+integration_dt: 1.32941 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999902
+
+Rc: 2.15181 pc
+r_0.01: 1.04667 pc, r_0.1: 2.78683 pc, r_0.2: 4.13493 pc, r_0.5: 9.67998 pc, r_0.9: 5469.69 pc
+
+SCF tracer particle E_wrt_host: -0.866773 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.327704 [1e3 kpc (km/s)]
+cluster virial ratio: 436.377
+
+alpha: 0.646834, b: 0.44597
+
+# of particles in core: 2987
+# of particles outside tidal radius = 46.0451 pc: 6811
+# of particles included in setting up the SCF: 43826
+# of particles, E_wrt_cluster < 0: 43717
+=====================================================
+system_time: 4871.56 Myr, wall clock time 2025-10-28 21:06:01 UTC
+system_dt: 37.878 Myr
+integration_dt: 3.2817 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999935
+
+Rc: 2.13274 pc
+r_0.01: 1.06243 pc, r_0.1: 2.74777 pc, r_0.2: 4.13033 pc, r_0.5: 9.63744 pc, r_0.9: 3494.14 pc
+
+SCF tracer particle E_wrt_host: -0.866766 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.327722 [1e3 kpc (km/s)]
+cluster virial ratio: 231.468
+
+alpha: 0.649097, b: 0.441366
+
+# of particles in core: 2969
+# of particles outside tidal radius = 85.2221 pc: 6469
+# of particles included in setting up the SCF: 43777
+# of particles, E_wrt_cluster < 0: 43591
+=====================================================
+system_time: 4909.44 Myr, wall clock time 2025-10-28 21:09:10 UTC
+system_dt: 47.3379 Myr
+integration_dt: 4.48889 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999957
+
+Rc: 2.11814 pc
+r_0.01: 1.05891 pc, r_0.1: 2.74283 pc, r_0.2: 4.15093 pc, r_0.5: 9.69455 pc, r_0.9: 2105.38 pc
+
+SCF tracer particle E_wrt_host: -0.866827 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.327612 [1e3 kpc (km/s)]
+cluster virial ratio: 176.683
+
+alpha: 0.648598, b: 0.442521
+
+# of particles in core: 2956
+# of particles outside tidal radius = 106.796 pc: 6529
+# of particles included in setting up the SCF: 43639
+# of particles, E_wrt_cluster < 0: 43564
+=====================================================
+system_time: 4956.78 Myr, wall clock time 2025-10-28 21:12:41 UTC
+system_dt: 32.5877 Myr
+integration_dt: 6.00786 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.999964
+
+Rc: 2.09633 pc
+r_0.01: 1.04488 pc, r_0.1: 2.7183 pc, r_0.2: 4.10635 pc, r_0.5: 9.68317 pc, r_0.9: 1338.33 pc
+
+SCF tracer particle E_wrt_host: -0.866777 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.327615 [1e3 kpc (km/s)]
+cluster virial ratio: 145.843
+
+alpha: 0.653437, b: 0.439118
+
+# of particles in core: 2901
+# of particles outside tidal radius = 125.02 pc: 6554
+# of particles included in setting up the SCF: 43620
+# of particles, E_wrt_cluster < 0: 43540
+=====================================================
+system_time: 4989.37 Myr, wall clock time 2025-10-28 21:14:58 UTC
+system_dt: 10.6343 Myr
+integration_dt: 4.8186 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.99988
+
+Rc: 2.06612 pc
+r_0.01: 1.02564 pc, r_0.1: 2.709 pc, r_0.2: 4.06614 pc, r_0.5: 9.61816 pc, r_0.9: 1649.9 pc
+
+SCF tracer particle E_wrt_host: -0.866784 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.327612 [1e3 kpc (km/s)]
+cluster virial ratio: 149.345
+
+alpha: 0.653953, b: 0.436139
+
+# of particles in core: 2832
+# of particles outside tidal radius = 115.326 pc: 6566
+# of particles included in setting up the SCF: 43555
+# of particles, E_wrt_cluster < 0: 43524
+number of integrations: 1509, simulation ended with system_time: 5000 Myr
+=====================================================
+system_time: 5000 Myr, wall clock time 2025-10-28 21:15:58 UTC
+system_dt: 10.6343 Myr
+integration_dt: 1.18875 Myr
+
+sum_n a_n00^2 / sum_nlm a_nlm^2: 0.99988
+
+Rc: 2.0794 pc
+r_0.01: 1.01946 pc, r_0.1: 2.68192 pc, r_0.2: 4.06758 pc, r_0.5: 9.68298 pc, r_0.9: 1874.72 pc
+
+SCF tracer particle E_wrt_host: -0.866779 [1e5 (km/s)^2]
+SCF tracer particle Lz: 0.32766 [1e3 kpc (km/s)]
+cluster virial ratio: 155.229
+
+alpha: 0.653953, b: 0.436139
+
+# of particles in core: 2941
+# of particles outside tidal radius = 110.551 pc: 6573
+# of particles included in setting up the SCF: 43528
+# of particles, E_wrt_cluster < 0: 43515
+simulation took 6.63915 hours
