@@ -5,7 +5,7 @@ KRIOS run, Longleaf Job ID: 20613092
 nmax: 10, lmax: 5
 sort_and_filter_scf_modes: 1
 
-ics_filename: /path/to/KRIOS/data/krios_king_ics_n_50000.csv
+ics_filename: /path/to/krios_king_ics_n_50000.csv
 
 include_relaxation: 1
 pairing_to_use: 2
