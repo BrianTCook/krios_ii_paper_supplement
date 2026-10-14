@@ -9,4 +9,4 @@ This repository also includes a .yml file, which can be used to set up a Conda e
 conda create --name krios_env --file environment.yml
 conda activate krios_env
 
-The arXiv posting for this paper can be found at https://arxiv.org/abs/2602.13385.
+A copy of the paper is available on The Astrophysical Journal website: https://iopscience.iop.org/article/10.3847/1538-4357/aea6a2
